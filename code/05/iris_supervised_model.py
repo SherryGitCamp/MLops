@@ -1,5 +1,5 @@
 # Check the versions of libraries
-# Python version
+# Python version 3.8+
 import os
 #import joblib
 import pickle
