@@ -6,6 +6,13 @@ jobs:
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Add missing GPG keys
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA16FCBCA621E701
+          # Add other keys as needed
+
       - name: Set up Python 3.8
         run: |
           sudo apt-get update
